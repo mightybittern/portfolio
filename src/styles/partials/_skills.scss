@@ -1,0 +1,52 @@
+.skills {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+        padding: 4px;
+        border-radius: 16px;
+        color: var(--color-text-dark);
+        background: linear-gradient(to right,
+                hsl(0, 0%, 99%) 0%,
+                hsl(224.97, 19.18%, 98.63%) 8.1%,
+                hsl(224.88, 41.81%, 97.58%) 15.5%,
+                hsl(224.74, 54%, 95.92%) 22.5%,
+                hsl(224.53, 60.49%, 93.71%) 29%,
+                hsl(224.26, 64.38%, 91%) 35.3%,
+                hsl(223.91, 67.04%, 87.84%) 41.2%,
+                hsl(223.46, 69.08%, 84.28%) 47.1%,
+                hsl(222.88, 70.81%, 80.34%) 52.9%,
+                hsl(222.14, 72.38%, 76.06%) 58.8%,
+                hsl(221.19, 73.91%, 71.48%) 64.7%,
+                hsl(219.96, 75.43%, 66.63%) 71%,
+                hsl(218.34, 76.99%, 61.54%) 77.5%,
+                hsl(216.22, 78.62%, 56.23%) 84.5%,
+                hsl(213.46, 80.33%, 50.74%) 91.9%,
+                hsl(210, 100%, 45.1%) 100%);
+
+    }
+
+    &__percentage {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        animation: blink .5s infinite alternate;
+        color: var(--color-text-primary);
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}

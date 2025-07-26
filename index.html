@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Martynas Kalenda</title>
+    <link rel="stylesheet" href="src/styles/global.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="src/scripts/spa.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar border">
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#skills">Skills</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#projects">Projects</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <div class="hero__image-wrap">
+                <img src="./src/assets/images/mk.webp" type="image/webp" alt="Martynas Kalenda" width="200" height="200"
+                    class="hero__image">
+            </div>
+            <div class="hero__wrap">
+                <h1 class="hero__title">Martynas Kalenda</h1>
+                <p class="hero__subtitle">Web Developer</p>
+                <p class="hero__description">Creating beautiful, accessible websites.</p>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <section class="about section" id="about">
+            <h2 class="about__title heading">About Me</h2>
+            <div class="about__content">
+                <p class="about__description">Hey there! I’m a Web Developer with a solid foundation in HTML, CSS, and a
+                    growing skill set in JavaScript. I’m passionate about bringing designs to life in the browser and
+                    turning creative ideas into clean, functional, and responsive interfaces.</p>
+
+                <p class="about__description"> Always curious and constantly evolving, I love staying up to date with
+                    the
+                    latest web trends, tools, and
+                    techniques. Whether it's trying out a new CSS feature or learning about emerging frameworks, I'm
+                    always
+                    looking forward to what’s next in front-end development.</p>
+
+                <p class="about__description"> Beyond the code, I’m a social and active guy—someone who thrives on
+                    collaboration, enjoys a good
+                    challenge, and believes in lifelong learning. If you're into building cool things for the web (or
+                    just
+                    want to geek out about front-end stuff), we’ll probably get along!</p>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <h2 class="skills__title heading">Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__item"><span>HTML5 & CSS3</span><span class="skills__percentage">88%</span></li>
+                <li class="skills__item"><span>JavaScript (ES6+)</span><span class="skills__percentage">33%</span></li>
+                <li class="skills__item"><span>Responsive Design</span><span class="skills__percentage">90%</span></li>
+                <li class="skills__item"><span>Git & VS Code</span><span class="skills__percentage">80%</span></li>
+            </ul>
+        </section>
+
+        <section class="projects section" id="projects">
+            <h2 class="projects__title heading">Projects</h2>
+            <ul class="projects__list">
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/portfolio" target="_blank"
+                        rel="noopener">Portfolio Website</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/blog-platform" target="_blank"
+                        rel="noopener">Blog Platform</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/recipe-finder" target="_blank"
+                        rel="noopener">Recipe Finder</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/portfolio-cms" target="_blank"
+                        rel="noopener">Portfolio CMS</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/chat-app" target="_blank"
+                        rel="noopener">Chat App</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/markdown-notes" target="_blank"
+                        rel="noopener">Markdown Notes</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/image-gallery" target="_blank"
+                        rel="noopener">Image Gallery</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/todo-api" target="_blank"
+                        rel="noopener">Todo API</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/expense-tracker" target="_blank"
+                        rel="noopener">Expense Tracker</a>
+                </li>
+                <li class="projects__item">
+                    <a class="projects__link" href="https://github.com/yourusername/weather-cli" target="_blank"
+                        rel="noopener">Weather CLI</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact section" id="contact">
+            <h2 class="contact__title heading">Contact</h2>
+            <form class="contact__form" action="https://formspree.io/f/mrblqoon" method="POST">
+                <div class="contact__field">
+                    <label class="contact__label" for="name">Name:</label>
+                    <input class="contact__input" type="text" id="name" name="name" required placeholder="Your Name"
+                        pattern="[A-Za-z\s]{1,50}"
+                        title="Name should only contain letters and spaces, up to 50 characters.">
+                </div>
+
+                <div class="contact__field">
+                    <label class="contact__label" for="email">Email:</label>
+                    <input class="contact__input" type="email" id="email" name="email" required placeholder="Your Email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                </div>
+
+                <div class="contact__field">
+                    <label class="contact__label" for="message">Message:</label>
+                    <textarea class="contact__textarea" id="message" name="message" rows="4" required
+                        placeholder="Short message here" pattern="[A-Za-z0-9\s.,!?]{1,500}"
+                        title="Message should be between 1 and 500 characters long."></textarea>
+                </div>
+
+                <button class="contact__button button" type="submit">Get in Touch</button>
+            </form>
+        </section>
+    </div>
+    <footer class="footer border_top">
+        <ul class="footer__socials">
+            <li class="footer__social-item">
+                <a aria-label="Twitter" class="footer__social-link" href="https://twitter.com/martynas_dev"
+                    target="_blank" rel="noopener">
+                    <svg width="40" height="40" aria-hidden="true">
+                        <use xlink:href="src/assets/sprite/sprite.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="footer__social-item">
+                <a aria-label="LinkedIn" class="footer__social-link" href="https://linkedin.com/in/martynas-kazlauskas"
+                    target="_blank" rel="noopener">
+                    <svg width="40" height="40" aria-hidden="true">
+                        <use xlink:href="src/assets/sprite/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="footer__social-item">
+                <a aria-label="GitHub" class="footer__social-link" href="https://github.com/martynas-dev"
+                    target="_blank" rel="noopener">
+                    <svg width="40" height="40" aria-hidden="true">
+                        <use xlink:href="src/assets/sprite/sprite.svg#icon-github"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <p class="footer__text">© 2025 Martynas Kalenda. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

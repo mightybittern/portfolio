@@ -1,0 +1,70 @@
+@use './normalize.css' as *;
+@use 'partials/header' as *;
+@use 'partials/about' as *;
+@use 'partials/skills' as *;
+@use 'partials/projects' as *;
+@use 'partials/contact' as *;
+@use 'partials/footer' as *;
+@use 'partials/button' as *;
+@use './color-palette' as *;
+@use '../assets/fonts/fonts' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Goldman', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    --container-width: 340px;
+    --container-gap: 10px;
+    width: calc(var(--container-width) + var(--container-gap) * 2);
+    margin-inline: auto;
+    margin-bottom: 24px;
+    padding-inline: 10px;
+    border-radius: 1rem;
+}
+
+.border {
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover)) 10;
+
+    &_top {
+        border-top: 1px solid transparent;
+        border-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover)) 10;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading {
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 16px;
+}

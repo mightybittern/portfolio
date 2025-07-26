@@ -1,0 +1,10 @@
+.about {
+    display: grid;
+    gap: 20px;
+
+    &__content {
+        display: grid;
+        gap: 16px;
+    }
+
+}

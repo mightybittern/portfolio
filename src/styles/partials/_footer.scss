@@ -1,0 +1,21 @@
+.footer {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    padding-block: 20px;
+
+    &__socials {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__social-link {
+        color: var(--color-social-icon);
+        transition: color 0.2s;
+
+        &:hover {
+            color: var(--color-social-icon-hover);
+        }
+    }
+}
