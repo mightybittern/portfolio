@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Martynas Kalenda</title>
-    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/global.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script defer src="src/scripts/spa.js"></script>
@@ -21,21 +21,21 @@
                 <li class="navbar__item"><a class="navbar__link" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero">
-            <div class="hero__image-wrap">
-                <img src="./src/assets/images/mk.webp" type="image/webp" alt="Martynas Kalenda" width="200" height="200"
-                    class="hero__image">
-            </div>
-            <div class="hero__wrap">
-                <h1 class="hero__title">Martynas Kalenda</h1>
-                <p class="hero__subtitle">Web Developer</p>
-                <p class="hero__description">Creating beautiful, accessible websites.</p>
-            </div>
-        </div>
     </header>
     <div class="container">
         <section class="about section" id="about">
             <h2 class="about__title heading">About Me</h2>
+            <article class="about__hero">
+                <div class="about__hero-image-wrap">
+                    <img src="./src/assets/images/mk.webp" type="image/webp" alt="Martynas Kalenda" width="200"
+                        height="200" class="about__hero-image">
+                </div>
+                <div class="about__hero-wrap">
+                    <h1 class="about__hero-title">Martynas Kalenda</h1>
+                    <p class="about__hero-subtitle">Web Developer</p>
+                    <p class="about__hero-description">Creating beautiful, accessible websites.</p>
+                </div>
+            </article>
             <div class="about__content">
                 <p class="about__description">Hey there! I’m a Web Developer with a solid foundation in HTML, CSS, and a
                     growing skill set in JavaScript. I’m passionate about bringing designs to life in the browser and
@@ -70,44 +70,292 @@
             <h2 class="projects__title heading">Projects</h2>
             <ul class="projects__list">
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/portfolio" target="_blank"
-                        rel="noopener">Portfolio Website</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/portfolio-deskx1.webp 1x,
+                                    ./src/assets/images/projects/portfolio-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/portfolio-deskx1.jpg 1x,
+                                    ./src/assets/images/projects/portfolio-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/portfolio-tabx1.webp 1x,
+                                    ./src/assets/images/projects/portfolio-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/portfolio-tabx1.jpg 1x,
+                                    ./src/assets/images/projects/portfolio-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/portfolio-mobx1.webp 1x,
+                ./src/assets/images/projects/portfolio-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/portfolio-mobx1.jpg 1x,
+                ./src/assets/images/projects/portfolio-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/portfolio-mobx2.jpg"
+                                alt="Portfolio Website Screenshot" loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Portfolio Website</h3>
+                            <p class="project-card__description">Personal portfolio built with HTML, SCSS, and vanilla
+                                JavaScript.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/portfolio"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+                <!-- Blog Platform - Project 2 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/blog-platform" target="_blank"
-                        rel="noopener">Blog Platform</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/blog-deskx1.webp 1x,
+                    ./src/assets/images/projects/blog-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/blog-deskx1.jpg 1x,
+                    ./src/assets/images/projects/blog-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/blog-tabx1.webp 1x,
+                    ./src/assets/images/projects/blog-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/blog-tabx1.jpg 1x,
+                    ./src/assets/images/projects/blog-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/blog-mobx1.webp 1x,
+                    ./src/assets/images/projects/blog-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/blog-mobx1.jpg 1x,
+                    ./src/assets/images/projects/blog-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/blog-mobx2.jpg" alt="Blog Platform Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Blog Platform</h3>
+                            <p class="project-card__description">Modern blog platform with CMS functionality and
+                                responsive design.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/blog-platform"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Recipe Finder - Project 3 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/recipe-finder" target="_blank"
-                        rel="noopener">Recipe Finder</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/recipes-deskx1.webp 1x,
+                    ./src/assets/images/projects/recipes-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/recipes-deskx1.jpg 1x,
+                    ./src/assets/images/projects/recipes-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/recipes-tabx1.webp 1x,
+                    ./src/assets/images/projects/recipes-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/recipes-tabx1.jpg 1x,
+                    ./src/assets/images/projects/recipes-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/recipes-mobx1.webp 1x,
+                    ./src/assets/images/projects/recipes-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/recipes-mobx1.jpg 1x,
+                    ./src/assets/images/projects/recipes-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/recipes-mobx2.jpg" alt="Recipe Finder App Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Recipe Finder</h3>
+                            <p class="project-card__description">Recipe search app with API integration and meal
+                                planning features.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/recipe-finder"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Portfolio CMS - Project 4 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/portfolio-cms" target="_blank"
-                        rel="noopener">Portfolio CMS</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/cms-deskx1.webp 1x,
+                    ./src/assets/images/projects/cms-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/cms-deskx1.jpg 1x,
+                    ./src/assets/images/projects/cms-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/cms-tabx1.webp 1x,
+                    ./src/assets/images/projects/cms-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/cms-tabx1.jpg 1x,
+                    ./src/assets/images/projects/cms-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/cms-mobx1.webp 1x,
+                    ./src/assets/images/projects/cms-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/cms-mobx1.jpg 1x,
+                    ./src/assets/images/projects/cms-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/cms-mobx2.jpg" alt="Portfolio CMS Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Portfolio CMS</h3>
+                            <p class="project-card__description">Content management system for portfolio websites with
+                                admin panel.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/portfolio-cms"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Chat App - Project 5 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/chat-app" target="_blank"
-                        rel="noopener">Chat App</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/chat-deskx1.webp 1x,
+                    ./src/assets/images/projects/chat-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/chat-deskx1.jpg 1x,
+                    ./src/assets/images/projects/chat-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/chat-tabx1.webp 1x,
+                    ./src/assets/images/projects/chat-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/chat-tabx1.jpg 1x,
+                    ./src/assets/images/projects/chat-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/chat-mobx1.webp 1x,
+                    ./src/assets/images/projects/chat-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/chat-mobx1.jpg 1x,
+                    ./src/assets/images/projects/chat-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/chat-mobx2.jpg" alt="Chat App Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Chat App</h3>
+                            <p class="project-card__description">Real-time chat application with WebSocket integration
+                                and user authentication.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/chat-app"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Markdown Notes - Project 6 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/markdown-notes" target="_blank"
-                        rel="noopener">Markdown Notes</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/notes-deskx1.webp 1x,
+                    ./src/assets/images/projects/notes-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/notes-deskx1.jpg 1x,
+                    ./src/assets/images/projects/notes-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/notes-tabx1.webp 1x,
+                    ./src/assets/images/projects/notes-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/notes-tabx1.jpg 1x,
+                    ./src/assets/images/projects/notes-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/notes-mobx1.webp 1x,
+                    ./src/assets/images/projects/notes-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/notes-mobx1.jpg 1x,
+                    ./src/assets/images/projects/notes-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/notes-mobx2.jpg" alt="Markdown Notes App Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Markdown Notes</h3>
+                            <p class="project-card__description">Note-taking app with markdown support and local storage
+                                functionality.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/markdown-notes"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Image Gallery - Project 7 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/image-gallery" target="_blank"
-                        rel="noopener">Image Gallery</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/gallery-deskx1.webp 1x,
+                    ./src/assets/images/projects/gallery-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/gallery-deskx1.jpg 1x,
+                    ./src/assets/images/projects/gallery-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/gallery-tabx1.webp 1x,
+                    ./src/assets/images/projects/gallery-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/gallery-tabx1.jpg 1x,
+                    ./src/assets/images/projects/gallery-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/gallery-mobx1.webp 1x,
+                    ./src/assets/images/projects/gallery-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/gallery-mobx1.jpg 1x,
+                    ./src/assets/images/projects/gallery-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/gallery-mobx2.jpg" alt="Image Gallery Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Image Gallery</h3>
+                            <p class="project-card__description">Responsive image gallery with lightbox and filtering
+                                capabilities.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/image-gallery"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Todo API - Project 8 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/todo-api" target="_blank"
-                        rel="noopener">Todo API</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/to-do-deskx1.webp 1x,
+                    ./src/assets/images/projects/to-do-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/to-do-deskx1.jpg 1x,
+                    ./src/assets/images/projects/to-do-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/to-do-tabx1.webp 1x,
+                    ./src/assets/images/projects/to-do-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/to-do-tabx1.jpg 1x,
+                    ./src/assets/images/projects/to-do-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/to-do-mobx1.webp 1x,
+                    ./src/assets/images/projects/to-do-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/to-do-mobx1.jpg 1x,
+                    ./src/assets/images/projects/to-do-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/to-do-mobx2.jpg" alt="Todo API Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Todo API</h3>
+                            <p class="project-card__description">RESTful API for todo management with CRUD operations
+                                and authentication.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/todo-api"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Expense Tracker - Project 9 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/expense-tracker" target="_blank"
-                        rel="noopener">Expense Tracker</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/expense-deskx1.webp 1x,
+                    ./src/assets/images/projects/expense-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/expense-deskx1.jpg 1x,
+                    ./src/assets/images/projects/expense-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/expense-tabx1.webp 1x,
+                    ./src/assets/images/projects/expense-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/expense-tabx1.jpg 1x,
+                    ./src/assets/images/projects/expense-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/expense-mobx1.webp 1x,
+                    ./src/assets/images/projects/expense-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/expense-mobx1.jpg 1x,
+                    ./src/assets/images/projects/expense-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/expense-mobx2.jpg" alt="Expense Tracker Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Expense Tracker</h3>
+                            <p class="project-card__description">Personal finance tracker with charts and budget
+                                management features.</p>
+                            <a class="project-card__button button"
+                                href="https://github.com/yourusername/expense-tracker" target="_blank"
+                                rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
+
+                <!-- Weather CLI - Project 10 -->
                 <li class="projects__item">
-                    <a class="projects__link" href="https://github.com/yourusername/weather-cli" target="_blank"
-                        rel="noopener">Weather CLI</a>
+                    <article class="project-card projects__card">
+                        <picture class="project-card__image">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/weather-deskx1.webp 1x,
+                    ./src/assets/images/projects/weather-deskx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="./src/assets/images/projects/weather-deskx1.jpg 1x,
+                    ./src/assets/images/projects/weather-deskx2.jpg 2x">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/weather-tabx1.webp 1x,
+                    ./src/assets/images/projects/weather-tabx2.webp 2x" type="image/webp">
+                            <source media="(min-width: 480px)" srcset="./src/assets/images/projects/weather-tabx1.jpg 1x,
+                    ./src/assets/images/projects/weather-tabx2.jpg 2x">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/weather-mobx1.webp 1x,
+                    ./src/assets/images/projects/weather-mobx2.webp 2x" type="image/webp">
+                            <source media="(max-width: 479px)" srcset="./src/assets/images/projects/weather-mobx1.jpg 1x,
+                    ./src/assets/images/projects/weather-mobx2.jpg 2x">
+                            <img src="./src/assets/images/projects/weather-mobx2.jpg" alt="Weather CLI Screenshot"
+                                loading="lazy" width="300" height="200">
+                        </picture>
+                        <div class="project-card__overlay">
+                            <h3 class="project-card__title">Weather CLI</h3>
+                            <p class="project-card__description">Command-line weather tool with real-time data and
+                                location search.</p>
+                            <a class="project-card__button button" href="https://github.com/yourusername/weather-cli"
+                                target="_blank" rel="noopener">Check it out</a>
+                        </div>
+                    </article>
                 </li>
             </ul>
         </section>

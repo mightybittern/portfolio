@@ -1,0 +1,30 @@
+// Match your HTML image breakpoints
+@mixin bp-mobile {
+    @media (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin bp-tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin bp-desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin bp-large {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media (max-width: 479px) {
+        @content;
+    }
+}

@@ -1,3 +1,5 @@
+@use '../breakpoints' as *;
+
 .about {
     display: grid;
     gap: 20px;
@@ -7,4 +9,87 @@
         gap: 16px;
     }
 
+    &__hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        width: 375px;
+        margin-inline: auto;
+        margin-bottom: 24px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__hero-wrap {
+        --shift: 140px;
+        position: absolute;
+        top: 80px;
+        left: calc(50% - var(--shift));
+        text-align: left;
+        width: 150px;
+    }
+
+    &__hero-image-wrap {
+        width: 340px;
+        height: 340px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50%;
+        box-shadow: 0 0 20px var(--color-accent-hover-alt, rgba(0, 0, 0, 0.05));
+
+        img {
+            position: absolute;
+            top: 0px;
+            left: 94px;
+            width: 250px;
+            height: auto;
+            clip-path: polygon(40% 0, 94% 0, 80% 39%, 52% 110%, 50% 100%, 0 100%);
+        }
+    }
+
+    &__hero-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: var(--color-accent);
+        text-transform: uppercase;
+    }
+
+    &__hero-subtitle {
+        font-size: 20px;
+        color: var(--color-text-secondary);
+        margin-bottom: 4px;
+    }
+
+    &__hero-description {
+        color: var(--color-text-secondary);
+        font-style: italic;
+        margin-bottom: 16px;
+    }
+
+    @include bp-tablet {
+        &__hero {
+            width: 100%;
+            max-width: 768px;
+            flex-flow: row-reverse;
+        }
+
+        &__hero-wrap {
+            position: static;
+            width: 300px;
+        }
+
+        &__hero-image-wrap {
+
+            img {
+                position: absolute;
+                top: -31px;
+                left: 0;
+                width: 100%;
+                height: auto;
+                clip-path: none;
+            }
+        }
+    }
 }

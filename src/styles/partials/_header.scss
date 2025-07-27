@@ -1,3 +1,5 @@
+@use '../breakpoints' as *;
+
 .header {
     text-align: center;
     margin-bottom: 24px;
@@ -7,8 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-background);
     padding-block: 20px;
-    margin-bottom: 24px;
 
     &__menu {
         display: flex;
@@ -65,60 +73,16 @@
             }
         }
     }
-}
 
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    width: 375px;
-    margin-inline: auto;
-    position: relative;
+    @include bp-tablet {
 
-    &__wrap {
-        --shift: 140px;
-        position: absolute;
-        top: 80px;
-        left: calc(50% - var(--shift));
-        text-align: left;
-        width: 150px;
-    }
-
-    &__image-wrap {
-        width: 340px;
-        height: 340px;
-        overflow: hidden;
-        position: relative;
-        border-radius: 50%;
-        box-shadow: 0 0 20px var(--color-accent-hover-alt, rgba(0, 0, 0, 0.05));
-
-        img {
-            position: absolute;
-            top: 0px;
-            left: 94px;
-            width: 250px;
-            height: auto;
-            clip-path: polygon(40% 0, 94% 0, 80% 39%, 52% 110%, 50% 100%, 0 100%);
+        &__menu {
+            gap: 16px;
         }
-    }
 
-    &__title {
-        font-size: 20px;
-        margin-bottom: 8px;
-        color: var(--color-accent);
-        text-transform: uppercase;
-    }
+        &__link {
+            font-size: 16px;
+        }
 
-    &__subtitle {
-        font-size: 20px;
-        color: var(--color-text-secondary);
-        margin-bottom: 4px;
-    }
-
-    &__description {
-        color: var(--color-text-secondary);
-        font-style: italic;
-        margin-bottom: 16px;
     }
 }
