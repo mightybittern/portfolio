@@ -1,7 +1,4 @@
 
-// Import SCSS for Vite to process during build
-import '../styles/global.scss';
-
 document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('.navbar__link');
