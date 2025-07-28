@@ -1,3 +1,6 @@
+@use "../breakpoints" as *;
+
+
 .skills {
 
     &__list {
@@ -47,6 +50,18 @@
 
         100% {
             opacity: 1;
+        }
+    }
+
+    @include bp-tablet {
+
+        &__list {
+            width: 540px;
+            margin-inline: auto
+        }
+
+        &__item {
+            font-size: 28px;
         }
     }
 }

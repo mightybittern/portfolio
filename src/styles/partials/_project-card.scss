@@ -68,6 +68,10 @@
     }
 
     @include bp-tablet {
+
+        width: 540px;
+        margin-inline: auto;
+
         &__image {
             height: 250px;
 

@@ -1,6 +1,6 @@
+@use "../breakpoints" as *;
+
 .contact {
-    display: grid;
-    gap: 20px;
     margin-bottom: 32px;
 
     &__title {
@@ -17,6 +17,8 @@
 
     &__form {
         display: grid;
+        margin-inline: auto;
+        width: 100%;
         gap: 16px;
     }
 
@@ -40,6 +42,76 @@
         }
     }
 
+    .choices {
+        width: 100%;
+        border-radius: 8px;
+        background-color: var(--color-input);
+        color: var(--color-text-primary);
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 15px;
+            transform: rotate(-135deg);
+            right: 20px;
+            background-color: var(--color-input);
+            border-left: 2px solid var(--color-text-primary);
+            border-top: 2px solid var(--color-text-primary);
+            transition: transform 0.3s ease;
+        }
+
+        &.is-open {
+            &::before {
+                transform: rotate(45deg);
+                top: 25px;
+            }
+        }
+    }
+
+    .choices__inner {
+        padding: 10px;
+        border-radius: 8px;
+        background-color: var(--color-input);
+        color: var(--color-text-primary);
+    }
+
+    .choices__list--dropdown.is-active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        position: relative;
+    }
+
+
+    .choices__list--dropdown {
+        position: absolute;
+        background-color: var(--color-input);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        z-index: 20;
+    }
+
+    .choices__item--selectable:not(.choices__placeholder) {
+        padding: 10px;
+        border-radius: 8px;
+        color: var(--color-text-primary);
+        background-color: var(--color-input);
+        cursor: pointer;
+    }
+
+    .choices__list--dropdown.is-active .choices__item:hover {
+        background-color: var(--color-text-dark);
+    }
+
+
+
     &__textarea {
         resize: none;
     }
@@ -48,5 +120,24 @@
         font-size: 24px;
         font-weight: 700;
         text-transform: uppercase;
+    }
+
+    @include bp-tablet {
+        &__form {
+            width: 560px;
+        }
+
+        &__title {
+            font-size: 28px;
+        }
+
+        &__text {
+            font-size: 21px;
+        }
+
+        &__button {
+            width: 300px;
+            margin-inline: auto;
+        }
     }
 }

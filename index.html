@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script defer src="src/scripts/spa.js"></script>
+    <script defer type="module" src="/src/scripts/choices.js"></script>
 </head>
 
 <body>
@@ -374,6 +375,17 @@
                     <label class="contact__label" for="email">Email:</label>
                     <input class="contact__input" type="email" id="email" name="email" required placeholder="Your Email"
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
+                </div>
+
+                <div class="contact__field">
+                    <label class="contact__label" for="my-select">Business Type:</label>
+                    <select class="contact__select" id="my-select" name="business" required>
+                        <option value="startup">Startup</option>
+                        <option value="enterprise">Enterprise</option>
+                        <option value="non-profit">Non-Profit</option>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
                 <div class="contact__field">
