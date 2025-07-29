@@ -5,5 +5,5 @@ lottie.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'src/assets/animations/animation.json', // update this path
+  path: '/animations/animation.json', // update this path
 });
