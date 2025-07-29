@@ -2,6 +2,15 @@
 
 .contact {
     margin-bottom: 32px;
+    position: relative;
+
+    &__animation {
+      position: absolute;
+      top: 0px;
+      right: -15px;
+      width: 100px;
+      height: 100px;
+    }
 
     &__title {
         margin-bottom: 16px;
@@ -29,91 +38,18 @@
 
     &__input,
     &__textarea {
-        width: 100%;
-        padding: 10px;
-        border-radius: 8px;
-        background-color: var(--color-input);
-        border: none;
-        outline: none;
-        color: var(--color-text-primary);
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: var(--color-input);
+      border: none;
+      outline: none;
+      color: var(--color-text-primary);
 
-        &::placeholder {
-            color: var(--color-text-secondary);
-        }
+      &::placeholder {
+        color: var(--color-text-secondary);
+      }
     }
-
-    .choices {
-        width: 100%;
-        border-radius: 8px;
-        background-color: var(--color-input);
-        color: var(--color-text-primary);
-        position: relative;
-
-        &::before {
-            content: '';
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 5px;
-            transform: rotate(-135deg);
-            right: 20px;
-            background-color: var(--color-input);
-            border-left: 2px solid var(--color-text-primary);
-            border-top: 2px solid var(--color-text-primary);
-            transition: transform 0.3s ease;
-        }
-
-        &.is-open {
-            &::before {
-                transform: rotate(45deg);
-                top: 15px;
-            }
-        }
-    }
-
-    .choices__inner {
-        min-height: 42px;
-        display: flex;
-        align-items: center;
-        border-radius: 8px;
-        background-color: var(--color-input);
-        color: var(--color-text-primary);
-    }
-
-
-    .choices__list--dropdown.is-active {
-        opacity: 1;
-        transform: translateY(0);
-        visibility: visible;
-        position: relative;
-    }
-
-
-    .choices__list--dropdown {
-        position: absolute;
-        background-color: var(--color-input);
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(-10px);
-        visibility: hidden;
-        transition: opacity 0.25s ease, transform 0.25s ease;
-        z-index: 20;
-    }
-
-    .choices__item--selectable:not(.choices__placeholder) {
-        padding: 10px;
-        border-radius: 8px;
-        color: var(--color-text-primary);
-        background-color: var(--color-input);
-        cursor: pointer;
-    }
-
-    .choices__list--dropdown.is-active .choices__item:hover {
-        background-color: var(--color-text-dark);
-    }
-
-
 
     &__textarea {
         resize: none;
@@ -126,6 +62,12 @@
     }
 
     @include bp-tablet {
+      &__animation {
+          top: -40px;
+          right: 100px;
+          width: 150px;
+          height: 150px;
+        }
         &__form {
             width: 560px;
         }

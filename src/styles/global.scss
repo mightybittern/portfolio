@@ -2,7 +2,7 @@
 @use './color-palette' as *;
 @use './breakpoints' as *;
 @use '../assets/fonts/fonts' as *;
-
+@use 'partials/choices' as *;
 @use 'partials/button' as *;
 @use 'partials/project-card' as *;
 @use 'partials/header' as *;
@@ -39,6 +39,7 @@ body {
     color: var(--color-text-primary);
     margin: 0;
     padding: 0;
+    height: 100dvh;
 }
 
 .container {
