@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar__link');
 
     function showSection(id) {

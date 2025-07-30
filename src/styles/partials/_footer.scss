@@ -1,8 +1,13 @@
+@use '../breakpoints' as *;
+@use '../mixins' as *;
+
 .footer {
     display: grid;
     gap: 20px;
     text-align: center;
     padding-block: 20px;
+
+    @include border-radiant(top);
 
     &__socials {
         display: flex;
@@ -18,4 +23,15 @@
             color: var(--color-social-icon-hover);
         }
     }
+
+  &__text {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+  }
+
+  @include bp-tablet {
+    &__text {
+      font-size: 16px;
+    }
+  }
 }

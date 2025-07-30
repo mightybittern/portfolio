@@ -1,0 +1,17 @@
+@mixin border-radiant($direction: bottom, $color1: var(--color-accent), $color2: var(--color-accent-hover), $slice: 10) {
+  border-#{$direction}: 1px solid transparent;
+  border-image: linear-gradient(90deg, $color1, $color2) $slice;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
