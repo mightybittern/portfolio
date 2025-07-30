@@ -38,11 +38,11 @@
             <h2 class="about__title heading">About Me</h2>
             <article class="about__hero">
                 <div class="about__hero-image-wrap">
-                    <img src="./src/assets/images/mk.webp" type="image/webp" alt="Martynas Kalenda" width="200"
+                    <img src="./src/assets/images/mk.webp" alt="Martynas Kalenda" width="200"
                         height="200" class="about__hero-image">
                 </div>
                 <div class="about__hero-wrap">
-                    <h1 class="about__hero-title">Martynas Kalenda</h1>
+                    <p class="about__hero-title">Martynas Kalenda</p>
                     <p class="about__hero-subtitle">Web Developer</p>
                     <p class="about__hero-description">Creating beautiful, accessible websites.</p>
                 </div>
@@ -388,22 +388,22 @@
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address.">
                 </div>
 
-                <div class="contact__field">
-                    <label class="contact__label" for="my-select">Business Type:</label>
-                    <select class="contact__select" id="my-select" name="business" required>
-                        <option value="startup">Startup</option>
-                        <option value="enterprise">Enterprise</option>
-                        <option value="non-profit">Non-Profit</option>
-                        <option value="freelancer">Freelancer</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+              <div class="contact__field">
+                <label class="contact__label" for="my-select">Business Type:</label>
+                <select class="contact__select" id="my-select" name="business" required>
+                  <option value=""></option>
+                  <option value="startup">Startup</option>
+                  <option value="enterprise">Enterprise</option>
+                  <option value="non-profit">Non-Profit</option>
+                  <option value="freelancer">Freelancer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
 
                 <div class="contact__field">
                     <label class="contact__label" for="message">Message:</label>
                     <textarea class="contact__textarea" id="message" name="message" rows="4" required
-                        placeholder="Short message here" pattern="[A-Za-z0-9\s.,!?]{1,500}"
-                        title="Message should be between 1 and 500 characters long."></textarea>
+                        placeholder="Short message here" title="Message should be between 1 and 500 characters long."></textarea>
                 </div>
 
                 <button class="contact__button button" type="submit">Get in Touch</button>
